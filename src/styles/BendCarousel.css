@@ -1,0 +1,375 @@
+.bend-carousel-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 100px 0 130px;
+  background: #0a0a0a;
+}
+
+.bend-carousel {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  cursor: grab;
+  perspective: 1400px;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.bend-carousel:active {
+  cursor: grabbing;
+}
+
+.bend-carousel-track {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  transform: translateX(-50%);
+  will-change: transform;
+}
+
+.bend-card {
+  position: relative;
+  flex: 0 0 auto;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.bend-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #151515;
+  cursor: pointer;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.bend-media {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+.bend-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 35%,
+      rgba(0, 0, 0, 0.78) 100%
+    );
+  pointer-events: none;
+}
+
+.bend-card-content {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  color: white;
+  z-index: 2;
+}
+
+.bend-category {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.bend-card-content h3 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.bend-play {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+}
+
+/* --------------------------------
+   Controls
+-------------------------------- */
+
+.bend-controls {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 10px;
+
+  z-index: 20;
+}
+
+.bend-controls button {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.bend-controls button:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: scale(1.06);
+}
+
+/* --------------------------------
+   Lightbox
+-------------------------------- */
+
+.bend-lightbox {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(20px);
+}
+
+.bend-lightbox-content {
+  position: relative;
+
+  width: min(1100px, 92vw);
+  max-height: 90vh;
+}
+
+.lightbox-media {
+  width: 100%;
+  height: min(75vh, 720px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  border-radius: 16px;
+
+  background: #111;
+}
+
+.lightbox-media img,
+.lightbox-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+
+  top: -55px;
+  right: 0;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+
+  cursor: pointer;
+  z-index: 10;
+}
+
+.lightbox-arrow {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+
+  cursor: pointer;
+
+  z-index: 10;
+}
+
+.lightbox-prev {
+  left: -70px;
+}
+
+.lightbox-next {
+  right: -70px;
+}
+
+.lightbox-info {
+  padding-top: 16px;
+  color: white;
+}
+
+.lightbox-info span {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.lightbox-info h2 {
+  margin: 5px 0 0;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+/* --------------------------------
+   Tablet
+-------------------------------- */
+
+@media (max-width: 900px) {
+  .bend-carousel-section {
+    padding: 70px 0 110px;
+  }
+
+  .bend-carousel {
+    height: 460px;
+  }
+
+  .lightbox-prev {
+    left: 15px;
+  }
+
+  .lightbox-next {
+    right: 15px;
+  }
+}
+
+/* --------------------------------
+   Mobile
+-------------------------------- */
+
+@media (max-width: 640px) {
+  .bend-carousel-section {
+    padding: 50px 0 100px;
+  }
+
+  .bend-carousel {
+    height: 430px;
+  }
+
+  .bend-carousel-track {
+    top: 10px;
+  }
+
+  .bend-card-inner {
+    border-radius: 14px;
+  }
+
+  .bend-card-content {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .bend-card-content h3 {
+    font-size: 21px;
+  }
+
+  .bend-category {
+    font-size: 9px;
+  }
+
+  .bend-controls {
+    bottom: 25px;
+  }
+
+  .bend-controls button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .bend-lightbox {
+    padding: 15px;
+  }
+
+  .bend-lightbox-content {
+    width: 100%;
+  }
+
+  .lightbox-media {
+    height: 70vh;
+    border-radius: 12px;
+  }
+
+  .lightbox-close {
+    top: -55px;
+  }
+
+  .lightbox-arrow {
+    width: 42px;
+    height: 42px;
+  }
+
+  .lightbox-info h2 {
+    font-size: 22px;
+  }
+}

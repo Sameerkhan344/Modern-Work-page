@@ -1,0 +1,20 @@
+{
+  "$schema": "https://vault.hyperiux.com/schema.json",
+  "framework": "next",
+  "router": "pages",
+  "tailwind": {
+    "config": null,
+    "css": "src/styles/globals.css"
+  },
+  "aliases": {
+    "components": "@/components",
+    "effects": "@/components/effects",
+    "hooks": "@/hooks",
+    "lib": "@/lib"
+  },
+  "installedEffects": {
+    "rotation-slider": {
+      "installedAt": "2026-09-28T01:19:06.439Z"
+    }
+  }
+}

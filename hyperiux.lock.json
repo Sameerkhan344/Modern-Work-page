@@ -1,0 +1,12 @@
+{
+  "components": {
+    "rotation-slider": {
+      "version": "1.0.1",
+      "installedAt": "2026-09-28T01:19:06.435Z",
+      "files": {
+        "src/components/effects/rotation-slider/index.jsx": "sha256:0fd06d0b76c6d9491b6397c126d734cf4a00314419a80c24b7d997005ba7e95e",
+        "src/components/effects/rotation-slider/RotationSliderComp.jsx": "sha256:4d2b3f9c46c3afe0034878789a42bd2d7c992ad8f7718b1ea7745b12b6eb29bd"
+      }
+    }
+  }
+}

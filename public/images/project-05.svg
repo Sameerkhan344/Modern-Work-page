@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#0e2925"/>
+<circle cx="960" cy="140" r="230" fill="#8ef0db" opacity=".16"/>
+<circle cx="180" cy="650" r="330" fill="#8ef0db" opacity=".11"/>
+<rect x="90" y="105" width="1020" height="590" rx="34" fill="none" stroke="#8ef0db" opacity=".32" stroke-width="3"/>
+<text x="100" y="170" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#8ef0db" opacity=".7">POLISH / PERFECTION</text>
+<text x="100" y="610" font-family="Arial, Helvetica, sans-serif" font-size="105" font-weight="700" fill="#8ef0db">05</text>
+<text x="100" y="655" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#8ef0db" opacity=".65">REPLACE WITH YOUR VIDEO</text>
+</svg>
