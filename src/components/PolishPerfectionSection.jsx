@@ -16,13 +16,13 @@ const PolishPerfectionSection = ({
         w-full
         overflow-hidden
         px-5
-        py-12
+        pt-20
         sm:px-8
         sm:py-16
         md:px-10
         md:py-20
         lg:px-12
-        lg:py-24
+        lg:pt-24
         ${className}
       `}
     >
@@ -44,7 +44,7 @@ const PolishPerfectionSection = ({
             max-w-[1000px]
             text-center
             font-sans
-            text-[clamp(2.4rem,6vw,4.7rem)]
+            text-[clamp(2.4rem,6vw,4rem)]
             font-normal
             leading-[0.95]
             tracking-[-0.055em]
