@@ -12,7 +12,7 @@ A clean Next.js Pages Router starter for an awards-style work page.
 - GSAP 3
 - Tailwind CSS 4
 - CSS 3D transforms
-- Native HTML5 video
+- Native HTML5 videos
 
 ## Important
 
